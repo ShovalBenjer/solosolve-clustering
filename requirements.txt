@@ -1,0 +1,25 @@
+# Kafka
+kafka-python==2.0.2
+
+# Spark
+pyspark==3.3.2
+sparkdl==1.1.0
+
+# NLP and ML
+spark-nlp==5.1.4
+scikit-learn==1.2.2
+hdbscan==0.8.30
+numpy==1.24.3
+pandas==2.0.2
+
+# Database
+mysql-connector-python==8.0.33
+SQLAlchemy==2.0.19
+
+# Utilities
+python-dotenv==1.0.0
+tqdm==4.65.0
+
+# For testing/debugging
+pytest==7.4.0
+jupyter==1.0.0 
