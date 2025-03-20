@@ -1,3 +1,3 @@
 """
-Source package for the CFPB complaint clustering system.
+CFPB Complaint Processing System
 """ 
