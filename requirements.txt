@@ -1,15 +1,36 @@
-pyspark==3.3.2
-kafka-python==2.0.2
-jupyter==1.0.0
-notebook==6.5.4
-pandas==1.5.3
-matplotlib==3.7.1
-seaborn==0.12.2
-numpy==1.24.3
-scikit-learn==1.2.2
-findspark==2.0.1
-pyarrow==11.0.0
-pyspark-stubs==3.0.0.post3
-jupyterlab==3.6.3
+# Core libraries
+numpy>=1.19.0
+pandas>=1.1.0
+pyspark>=3.1.2
+pyarrow>=4.0.0
+
+# Spark NLP
+spark-nlp>=3.4.0
+
+# Kafka
+confluent-kafka>=1.8.2
+kafka-python>=2.0.2
+
+# ML and evaluation
+scikit-learn>=0.24.0
+mlflow>=1.20.0
+
+# Visualization
+matplotlib>=3.3.0
+seaborn>=0.11.0
+
+# Utilities
+tqdm>=4.60.0
+python-dotenv>=0.19.0
+fastavro>=1.4.0
+requests>=2.25.0
+
+# Jupyter (for notebooks)
+jupyter>=1.0.0
+notebook>=6.2.0
+
+# Testing
+pytest>=6.2.5
+
 # For later integration with Superset
 apache-superset==2.1.0 

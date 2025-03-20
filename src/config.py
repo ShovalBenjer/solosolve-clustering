@@ -38,8 +38,27 @@ CHECKPOINT_LOCATION = DATA_DIR / "checkpoints"
 
 # Kafka configuration
 KAFKA_BOOTSTRAP_SERVERS = "localhost:9092"
-KAFKA_TOPIC = "cfpb_complaints"
+KAFKA_INPUT_TOPIC = "complaints-input"
+KAFKA_OUTPUT_TOPIC = "complaints-predictions"
+KAFKA_TOPIC = "cfpb_complaints"  # General topic name (used in earlier missions)
 KAFKA_GROUP_ID = "complaint_processor"
+
+# Kafka producer settings
+KAFKA_PRODUCER_CONFIG = {
+    'client.id': 'complaint-producer',
+    'linger.ms': 100,
+    'batch.size': 65536,
+    'compression.type': 'lz4',
+    'acks': '1'
+}
+
+# Kafka consumer settings
+KAFKA_CONSUMER_CONFIG = {
+    'auto.offset.reset': 'latest',
+    'enable.auto.commit': 'true',
+    'auto.commit.interval.ms': '5000',
+    'max.poll.interval.ms': '300000'
+}
 
 # Spark configuration parameters
 SPARK_BATCH_SIZE = 1000
@@ -58,6 +77,14 @@ SPARK_CONFIG = {
     "spark.streaming.kafka.maxRatePerPartition": "1000",
     "spark.streaming.backpressure.enabled": "true",
     "spark.streaming.kafka.consumer.cache.enabled": "false"
+}
+
+# Spark Structured Streaming configuration
+STREAMING_CONFIG = {
+    "maxOffsetsPerTrigger": SPARK_MAX_OFFSETS_PER_TRIGGER,
+    "startingOffsets": "latest",
+    "failOnDataLoss": "false",
+    "checkpointLocation": str(CHECKPOINT_LOCATION / "processing")
 }
 
 # Model training parameters
@@ -122,4 +149,8 @@ CV_FOLDS = 5
 CV_METRIC = "areaUnderROC"
 
 # Feature importance settings
-TOP_FEATURES_TO_LOG = 10 
+TOP_FEATURES_TO_LOG = 10
+
+# Streaming simulation settings
+SIMULATION_COMPLAINTS_PER_MINUTE = 10000
+SIMULATION_DEFAULT_DURATION_MINUTES = 5 
