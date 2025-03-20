@@ -62,6 +62,10 @@ MODEL_PARAMS = {
 # Prediction threshold for decision logic
 PREDICTION_THRESHOLD = 0.5
 
+# Advanced NLP features configuration
+ENABLE_ADVANCED_NLP = True  # Set to True to enable advanced NLP features
+NLP_BATCH_SIZE = 32  # Batch size for NLP operations
+
 # Logging configuration
 LOG_LEVEL = "INFO"
 LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
