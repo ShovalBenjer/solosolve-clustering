@@ -1,0 +1,21 @@
+# Core packages
+pyspark==3.3.1
+kafka-python==2.0.2
+jupyterlab==3.6.1
+notebook==6.5.3
+
+# Spark NLP and ML
+spark-nlp==4.4.0
+numpy==1.24.2
+pandas==1.5.3
+scikit-learn==1.2.2
+
+# Visualization
+matplotlib==3.7.1
+seaborn==0.12.2
+
+# Utilities
+tqdm==4.65.0
+joblib==1.2.0
+pytest==7.3.0
+pytest-spark==0.6.0 
