@@ -1,36 +1,46 @@
 # Core libraries
-numpy>=1.19.0
-pandas>=1.1.0
-pyspark>=3.1.2
-pyarrow>=4.0.0
+numpy>=1.20.0
+pandas>=1.3.0
+pyspark>=3.2.0
+pyarrow>=6.0.0
 
 # Spark NLP
-spark-nlp>=3.4.0
+spark-nlp>=4.0.0
 
 # Kafka
 confluent-kafka>=1.8.2
 kafka-python>=2.0.2
 
-# ML and evaluation
-scikit-learn>=0.24.0
+# ML and Evaluation
+scikit-learn>=1.0.0
 mlflow>=1.20.0
 
 # Visualization
-matplotlib>=3.3.0
+matplotlib>=3.4.0
 seaborn>=0.11.0
 
+# Apache Superset and dependencies
+apache-superset>=1.4.0
+flask-appbuilder>=3.4.0
+sqlalchemy>=1.4.0
+flask>=2.0.0
+werkzeug>=2.0.0
+wtforms>=2.3.0
+marshmallow>=3.14.0
+marshmallow-sqlalchemy>=0.26.0
+redis>=4.0.0
+pyhive>=0.6.0
+psycopg2-binary>=2.9.0  # PostgreSQL driver
+
 # Utilities
-tqdm>=4.60.0
+tqdm>=4.62.0
 python-dotenv>=0.19.0
 fastavro>=1.4.0
-requests>=2.25.0
+requests>=2.26.0
 
-# Jupyter (for notebooks)
+# Jupyter
 jupyter>=1.0.0
-notebook>=6.2.0
+notebook>=6.4.0
 
 # Testing
-pytest>=6.2.5
-
-# For later integration with Superset
-apache-superset==2.1.0 
+pytest>=6.2.5 
